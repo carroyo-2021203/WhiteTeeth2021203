@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosarroyo.controller.UsuarioController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3ef4d3" height="413.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="926.0" />
+      <CubicCurve controlX1="-655.5999755859375" controlX2="-655.5999755859375" controlY1="58.41679382324219" controlY2="404.8846740722656" endX="726.54443359375" endY="344.8846740722656" fill="WHITE" layoutX="433.0" layoutY="102.0" startX="384.329345703125" startY="-269.98797607421875" stroke="WHITE" />
+      <ImageView fitHeight="335.0" fitWidth="375.0" layoutX="581.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Fondo.png" />
+         </image>
+      </ImageView>
+      <QuadCurve controlX="-50.0" controlY="-100.0" endX="374.04248046875" endY="195.56094360351562" fill="#1fff88" layoutX="283.0" layoutY="217.0" startX="-282.7574768066406" startY="195.56094360351562" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <Label layoutX="75.0" layoutY="152.0" prefHeight="32.0" prefWidth="70.0" text="Usuario" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="265.0" layoutY="64.0" prefHeight="303.0" prefWidth="470.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nombre Usuario">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Apellido Usuario" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Usuario" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Contraseñas" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombreUsuario" editable="false" stylesheets="@../resource/WhiteTeethCSS.css" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreApellido" editable="false" stylesheets="@../resource/WhiteTeethCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtUsuario" editable="false" stylesheets="@../resource/WhiteTeethCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPassword" editable="false" stylesheets="@../resource/WhiteTeethCSS.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="btnNuevo" layoutX="27.0" layoutY="197.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="68.0" prefWidth="218.0" stylesheets="@../resource/WhiteTeethCSS.css" text=" Nuevo">
+         <graphic>
+            <ImageView fx:id="imgNuevo" fitHeight="45.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/NuevoPaciente.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Unicode MS" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="37.0" layoutY="295.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="66.0" prefWidth="218.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Cancelar">
+         <graphic>
+            <ImageView fx:id="imgEliminar" fitHeight="62.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Cancelar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="ESRI NIMA DNC LN" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="129.0" fitWidth="131.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/NuevoUsuario.png" />
+         </image>
+      </ImageView>
+      <Line endX="36.434356689453125" fill="#74caff" layoutX="140.0" layoutY="152.0" startX="-100.0" strokeMiterLimit="20.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </Line>
+   </children>
+</AnchorPane>

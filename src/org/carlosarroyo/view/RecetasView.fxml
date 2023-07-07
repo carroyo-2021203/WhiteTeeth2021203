@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosarroyo.controller.RecetasController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3ef4d3" height="413.0" stroke="BLACK" strokeType="INSIDE" width="814.0" />
+      <CubicCurve controlX1="-655.5999755859375" controlX2="-655.5999755859375" controlY1="58.41679382324219" controlY2="404.8846740722656" endX="726.54443359375" endY="344.8846740722656" fill="WHITE" layoutX="440.0" layoutY="95.0" startX="384.329345703125" startY="-269.98797607421875" stroke="WHITE" />
+      <ImageView fitHeight="335.0" fitWidth="375.0" layoutX="577.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Fondo.png" />
+         </image>
+      </ImageView>
+      <QuadCurve controlX="-50.0" controlY="-100.0" endX="374.04248046875" endY="195.56094360351562" fill="#1fff88" layoutX="249.0" layoutY="238.0" startX="-282.7574768066406" startY="195.56094360351562" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <VBox layoutX="16.0" layoutY="166.0" prefHeight="207.0" prefWidth="153.0">
+         <children>
+            <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="131.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Nuevo" textFill="#000000f1">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/NuevoPaciente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="132.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Eliminar" textFill="#000000f1">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/EliminarPaciente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="57.0" prefWidth="153.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Editar" textFill="#000000f1">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/EditarPaciente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="58.0" prefWidth="153.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Reporte" textFill="#000000f1">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="58.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/ReportedePaciente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <GridPane fx:id="grpRecetas" layoutX="172.0" layoutY="58.0" prefHeight="91.0" prefWidth="734.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.599951171875" minWidth="10.0" prefWidth="117.599951171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.8000274658203" minWidth="10.0" prefWidth="122.8000244140625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.8000061035156" minWidth="10.0" prefWidth="121.00002441406247" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="386.5999755859375" minWidth="10.0" prefWidth="386.5999755859375" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="grpFechas" prefHeight="18.0" prefWidth="119.0" text="Código Receta :" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Demi ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="124.0" text="Numero Colegiado :" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Demi ITC" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="tstNombresPaciente" prefHeight="18.0" prefWidth="172.0" text="  Fecha Receta" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Eras Demi ITC" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoReceta" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="cmbDoctor" prefHeight="26.0" prefWidth="391.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblReceta" layoutX="172.0" layoutY="154.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="263.0" prefWidth="649.0" stylesheets="@../resource/WhiteTeethCSS.css">
+         <columns>
+            <TableColumn fx:id="colCodigoReceta" prefWidth="181.6000213623047" text="Código Receta :" />
+            <TableColumn fx:id="colFechaReceta" prefWidth="198.4000244140625" text="Fecha Receta" />
+            <TableColumn fx:id="colNumeroColegiado" prefWidth="267.1999755859375" text="Doctor" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0bde83a8" height="141.0" layoutX="26.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+      <ImageView fitHeight="134.0" fitWidth="147.0" layoutX="8.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Recetas.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="135.0" prefHeight="18.0" prefWidth="83.0" text="Recetas" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="Barlow Condensed Regular" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="58.0" fitWidth="83.0" layoutY="373.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Home.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

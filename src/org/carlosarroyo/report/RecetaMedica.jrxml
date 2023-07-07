@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecetaMedica" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0caa3e76-6992-45be-a79b-f920fec83019">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="Doctor" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Nobre" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Doctores D left join   Citas C  on D.numeroColegiado = C.numeroColegiado inner join Especialidades S on
+D.codigoEspecialidad = S.codigoEspecialidad left join  Recetas R  on  D.numeroColegiado=R.numeroColegiado
+LEFT join  DetalleRecetas E on  E.codigoReceta = R.codigoReceta Left join  Medicamentos M on M.codigoMedicamento =  E.codigoMedicamento
+left join Pacientes P on C.codigoPaciente= P.codigoPaciente
+where D.numeroColegiado = $P{Doctor};]]>
+	</queryString>
+	<field name="numeroColegiado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreDoctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosDoctor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEspecialidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCita" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaCita" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaCita" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripCondActual" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoReceta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaReceta" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoDetalleReceta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dosis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoMedicamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreMedicamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechadeNacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaPrimeraVisita" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="0" y="21" width="555" height="781" uuid="b33cca54-a545-477b-b348-0491ae77096c"/>
+				<imageExpression><![CDATA["org/carlosarroyo/image/Receta.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="15" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="122" splitType="Stretch">
+			<textField>
+				<reportElement x="63" y="61" width="100" height="20" uuid="f769bafd-b9a6-41cd-a197-aa88f28c8597"/>
+				<textFieldExpression><![CDATA[$F{nombreDoctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="61" width="100" height="20" uuid="c4cc711c-87c9-4182-85da-3a7f1e040177"/>
+				<textFieldExpression><![CDATA[$F{apellidosDoctor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="24" width="100" height="20" uuid="ae278ceb-a731-4ce3-9c33-73c9a2f8ed3c"/>
+				<textFieldExpression><![CDATA[$F{numeroColegiado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="95" width="100" height="20" uuid="54ca1829-01f3-4cbc-9586-d3e26594f190"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="387" splitType="Stretch">
+			<textField>
+				<reportElement x="232" y="45" width="100" height="20" uuid="c784c31e-298d-4084-9135-dae850ad92ca"/>
+				<textFieldExpression><![CDATA[$F{nombrePaciente}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="334" y="45" width="100" height="20" uuid="61049afe-5923-417c-84b7-69f96dd48b72"/>
+				<textFieldExpression><![CDATA[$F{apellidosPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="81" width="100" height="20" uuid="1c871b46-4f86-484f-bb09-c0cb9f02b7f4"/>
+				<textFieldExpression><![CDATA[$F{direccionPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="136" width="100" height="20" uuid="d085cd45-eef4-4f42-915f-753e8ecbe5ef"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="168" width="100" height="20" uuid="a7df07c2-770f-44cf-ad4d-87423005a50b"/>
+				<textFieldExpression><![CDATA[$F{telefonoPersonal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="349" y="136" width="100" height="20" uuid="234d73bf-122a-4279-b46c-060acbb85b8a"/>
+				<textFieldExpression><![CDATA[$F{fechadeNacimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="211" width="100" height="20" uuid="1546c7f5-673b-46fe-8aa3-f02024afa02b"/>
+				<textFieldExpression><![CDATA[$F{descripCondActual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="357" width="100" height="20" uuid="e8733ba1-df02-43f6-a29e-f07bc87041ea"/>
+				<textFieldExpression><![CDATA[$F{tratamiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="283" width="100" height="20" uuid="fdf3fb00-2163-4b03-a93d-9410eb0a9a8c"/>
+				<textFieldExpression><![CDATA[$F{nombreMedicamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="318" width="100" height="20" uuid="4a4199bd-8387-4625-a92e-ca1ad21577f1"/>
+				<textFieldExpression><![CDATA[$F{dosis}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="82" y="39" width="100" height="20" uuid="790ed651-ee42-4d25-8136-1609ebf09aa1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaReceta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="78" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

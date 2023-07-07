@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.QuadCurve?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosarroyo.controller.ProgramadorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3ef4d3" height="413.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="630.0" />
+      <CubicCurve controlX1="-655.5999755859375" controlX2="-286.79998779296875" controlY1="58.41679382324219" controlY2="388.79998779296875" endX="271.51220703125" endY="335.4849853515625" fill="WHITE" layoutX="439.0" layoutY="103.0" startX="165.04254150390625" startY="-266.4390563964844" stroke="WHITE" />
+      <ImageView fitHeight="335.0" fitWidth="375.0" layoutX="292.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Fondo.png" />
+         </image>
+      </ImageView>
+      <QuadCurve controlX="-50.0" controlY="-100.0" endX="374.04248046875" endY="195.56094360351562" fill="#1fff88" layoutX="275.0" layoutY="228.0" startX="-282.7574768066406" startY="195.56094360351562" stroke="TRANSPARENT" strokeType="INSIDE" />
+      <ImageView fitHeight="85.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Home.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="70.0" layoutY="140.0" prefHeight="196.0" prefWidth="204.0">
+         <children>
+            <Label prefHeight="43.0" prefWidth="221.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Nombres : Carlos Arnoldo" />
+            <Label prefHeight="43.0" prefWidth="202.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Apellidos: Arroyo Gudiel">
+               <font>
+                  <Font name="Gill Sans MT" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="43.0" prefWidth="210.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Carnet : 2021203" />
+            <Label prefHeight="43.0" prefWidth="209.0" stylesheets="@../resource/WhiteTeethCSS.css" text="Codigo Tecnico: IN5AV" />
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1ff8ff54" height="289.0" layoutX="344.0" layoutY="94.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label layoutX="222.0" layoutY="40.0" text="Programador">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="274.0" fitWidth="164.0" layoutX="362.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Fotografia.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

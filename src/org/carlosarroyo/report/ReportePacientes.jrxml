@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePacientes" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3277c05-70f7-4e91-88b9-873e00eb7a89">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="264"/>
+	<queryString>
+		<![CDATA[call sp_ListarPacientes();]]>
+	</queryString>
+	<field name="codigoPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechadeNacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoPersonal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaPrimeraVisita" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="562" height="752" uuid="56255412-3381-4f8a-a3d2-1b7a4ec691a9"/>
+				<imageExpression><![CDATA["org/carlosarroyo/image/FondoPlantilla.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="54" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="16" width="145" height="19" uuid="89764c73-3ee0-48b3-b20b-d889fb2e3db5"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="145" y="16" width="145" height="19" uuid="931068bd-c758-42e6-9fff-6a7518058a7e"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="290" y="16" width="145" height="19" uuid="726f96be-20c0-4445-9b51-035edfc97b3d"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="435" y="16" width="137" height="19" uuid="925d8bb7-2a21-40c2-897f-5a59b75e4c03"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="159" y="16" width="100" height="20" uuid="2c3549d8-69c4-4d87-a623-7e6a58da8200"/>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="16" width="100" height="20" uuid="a36062f2-8ee3-4bd8-9c5b-d599c9433e68"/>
+				<text><![CDATA[fechadeNacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="16" width="100" height="20" uuid="a4722c6a-09f2-43be-a48d-b3aeb1635911"/>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="145" height="20" uuid="27decbc6-7a9b-4e02-8e13-98dc957b74d7"/>
+				<text><![CDATA[Nombre Del Paciente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="33" width="572" height="1" uuid="fad199a8-1e1a-4a5f-b8d0-d3cded705e6e"/>
+			</line>
+			<textField>
+				<reportElement x="18" y="0" width="100" height="20" uuid="4059cec4-20d1-420f-aab4-6abefbfc32da"/>
+				<textFieldExpression><![CDATA[$F{nombrePaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="0" width="100" height="20" uuid="ed03031d-9a68-4f22-bdc0-3ea8e76d26bb"/>
+				<textFieldExpression><![CDATA[$F{apellidosPaciente}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="309" y="0" width="100" height="20" uuid="c94ef668-c57e-4845-9bf5-98118edfc9b0"/>
+				<textFieldExpression><![CDATA[$F{fechadeNacimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="0" width="100" height="20" uuid="bb008074-0f69-460f-bf7e-9b14e1c22925"/>
+				<textFieldExpression><![CDATA[$F{direccionPaciente}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="145" y="0" width="1" height="33" uuid="6ce807a0-1750-4dfc-9a80-a92af6d7660c"/>
+			</line>
+			<line>
+				<reportElement x="289" y="0" width="1" height="33" uuid="03030a2b-c574-4f90-953a-bb0d40062790"/>
+			</line>
+			<line>
+				<reportElement x="434" y="0" width="1" height="33" uuid="e559881a-3492-4795-a032-209f5d51b009"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="426" y="34" width="168" height="20" uuid="32ca7776-3e9e-4fd1-97c3-28eb2e660230"/>
+				<text><![CDATA[Tu sonrisa es nuestra Prioridad]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

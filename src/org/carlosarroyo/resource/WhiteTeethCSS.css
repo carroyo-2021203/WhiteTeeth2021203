@@ -1,0 +1,126 @@
+
+
+.menu-bar {
+    -fx-background-color: #367e5e    ;
+    -fx-opacity:0.5;
+    -fx-border-width: 2.0;
+    -fx-background-radius : 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+    -fx-border-style: solid;
+    
+}
+
+.menu-bar .label {
+    -fx-font-size: 14.0 pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-font-weight: bold; 
+    -fx-padding: 10.0px;
+     
+
+}
+
+.menu{
+        -fx-background: #20c0f4 ;
+    -fx-background-radius : 10 10 10 10;
+}
+
+
+
+.menu-item {
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+    -fx-text-fill: black;
+    -fx-background: #20c0f4 ;
+
+    -fx-border-width: 2px;
+    -fx-border-color:  #367e5e;
+  
+    -fx-border-style: solid;
+    
+}
+
+
+.menu-item .label{
+    -fx-font-size: 14.0 pt;
+    -fx-text-fill:   #20648c    ;
+    -fx-font-family: "FZCuYuan-M03S";
+    
+    
+}
+
+.menu-item :hover {
+    
+    -fx-background-color:  #20c0f4    ;
+      -fx-border-radius: 10 10 10 10;
+    -fx-border-style: solid;
+    
+}
+
+.button{
+
+    -fx-background-color: transparent;
+     -fx-border-radius: 30 30 30 30;
+
+}
+
+.button:hover{
+
+	-fx-background-color:  #20c0f4    ;
+
+}
+
+
+.button:pressed {
+    -fx-background-color:  #407d88 ;
+    -fx-text-fill: white;
+}
+
+.label {
+    
+   -fx-font-family: "Gill Sans MT";
+    -fx-font-size: 13pt;
+
+  
+}
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 10;
+    -fx-background-color: #56ce98 ;
+    
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER;
+    -fx-font-size: 10pt;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ }
+ 
+.text-field{
+   -fx-font-family: "Quicksand";
+   -fx-font-size: 14;
+   -fx-font-weight:bold;
+   
+   -fx-border-color:darkblue;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+
+   -fx-background-color: white;
+   
+   -fx-text-fill: #407d88;
+}
